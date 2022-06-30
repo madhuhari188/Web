@@ -9,7 +9,7 @@ import passport2 from './config/passport.cjs'
 import path from 'path'
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.port || 5000;
 dotenv.config();
 
 const URI = process.env.ATLAS_URI;
@@ -28,9 +28,9 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({
     extended: false
 }))
-app.use(express.static(path.join(__dirname, "client", "build")))
+app.use(express.static(path.join(__dirname, "/client", "build")))
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+    res.sendFile(path.join(__dirname, "/client/build", "index.html"));
 });
 app.use(bodyParser.json())
 app.use(passport.initialize())
