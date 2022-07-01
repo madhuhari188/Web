@@ -6,11 +6,16 @@ import cookieParser from 'cookie-parser';
 import passport from 'passport';
 import bodyParser from 'body-parser'
 import passport2 from './config/passport.cjs'
-import path from 'path'
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const app = express();
 const port = process.env.port || 5000;
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+
+const __dirname = path.dirname(__filename);
 
 const URI = process.env.ATLAS_URI;
 
