@@ -12,7 +12,8 @@
   "keywords": [],
   "author": "",
   "engines": {
-    "node": "16.13.2"
+    "node": "16.13.2",
+    "npm":"8.1.2"
   },
   "license": "ISC",
   "dependencies": {
