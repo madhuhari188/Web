@@ -12,7 +12,7 @@ export default function Home (){
 }
 
     const sub =()=>{
-        axios.get('http://localhost:5000/analyst/')
+        axios.get('analyst/')
         .then((res)=>{
             if(res.status==200){
                 toast.success('Super!!!')
