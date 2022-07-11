@@ -12,6 +12,8 @@ const Login =(props)=>{
         email:"",password:""
     });
 
+    console.log(props.auth)
+
     const navigate = useNavigate()
 
     const [err,setErr] = useState({})
@@ -20,6 +22,7 @@ const Login =(props)=>{
         setLog({...log,[name]:value});
     }
 
+    console.log(props.auth)
     useEffect(()=>{
         if(props.auth.isAuthenticated){
             navigate('/dashboard')
@@ -50,11 +53,11 @@ const Login =(props)=>{
 
 }
 
-Login.prototype = {
-    loginUser: PropTypes.func.isRequired,
-    auth: PropTypes.object.isRequired,
-    error: PropTypes.object.isRequired
-};
+// Login.prototype = {
+//     loginUser: PropTypes.func.isRequired,
+//     auth: PropTypes.object.isRequired,
+//     error: PropTypes.object.isRequired
+// };
 
 const mapStateToProps = useState =>({
     auth: useState.auth,

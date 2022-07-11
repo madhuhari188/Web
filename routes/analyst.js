@@ -39,7 +39,7 @@ router.route('/fetch/date/').get((req,res)=>{
     // const startDate = new Date(sDate);
     // const endDate = new Date(eDate);
 
-    Analyst.find({createdAt:{$gte:new Date("2022-06-20"),$lte: new Date("2022-06-23")}})
+    Analyst.find({createdAt:{$gte:new Date("2022-06-20"),$lte: new Date("2022-06-29")}})
     .then(analyst=>res.json(analyst))
     .catch(err=>res.status(400).json('err'+err))
 })
